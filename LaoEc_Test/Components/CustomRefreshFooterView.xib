@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="coT-x1-Pea" customClass="RefreshFooterView" customModule="LaoEc_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="U9g-AU-3UO">
+                    <rect key="frame" x="177" y="15" width="20" height="20"/>
+                    <color key="color" red="0.93674651019999999" green="0.47714061289999998" blue="0.1222800889" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </activityIndicatorView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="O0m-6N-tvG" firstAttribute="trailing" secondItem="U9g-AU-3UO" secondAttribute="trailing" constant="178" id="8oT-m0-1IB"/>
+                <constraint firstItem="O0m-6N-tvG" firstAttribute="bottom" secondItem="U9g-AU-3UO" secondAttribute="bottom" constant="15" id="Zyq-dn-P83"/>
+                <constraint firstItem="U9g-AU-3UO" firstAttribute="top" secondItem="O0m-6N-tvG" secondAttribute="top" constant="15" id="tXd-zX-8k6"/>
+                <constraint firstItem="U9g-AU-3UO" firstAttribute="leading" secondItem="O0m-6N-tvG" secondAttribute="leading" constant="177" id="yj4-jI-mmE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="O0m-6N-tvG"/>
+            <connections>
+                <outlet property="refreshControlIndicator" destination="U9g-AU-3UO" id="xYE-8T-eNG"/>
+            </connections>
+            <point key="canvasLocation" x="-242" y="4"/>
+        </collectionReusableView>
+    </objects>
+</document>

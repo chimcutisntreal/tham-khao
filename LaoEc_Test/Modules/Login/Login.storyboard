@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="xa4-kM-KGU">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" modalPresentationStyle="currentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="apA-HW-2ND" customClass="LoginViewController" customModule="LaoEc_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3gT-LH-IOn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YTC-nG-7WC">
+                                <rect key="frame" x="37" y="117" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UlN-sj-pIl">
+                                <rect key="frame" x="90" y="75" width="247" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="247" id="LJg-eH-T9t"/>
+                                    <constraint firstAttribute="height" constant="34" id="rgJ-OO-y6C"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiK-mq-J88">
+                                <rect key="frame" x="38" y="159" width="299" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="XPP-At-DQT"/>
+                                </constraints>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="pressOnSignIn:" destination="apA-HW-2ND" eventType="touchUpInside" id="Ofk-tH-ZHr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dny-5V-C0S">
+                                <rect key="frame" x="37" y="75" width="45" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="8pN-ah-5gW"/>
+                                    <constraint firstAttribute="height" constant="34" id="EAA-18-v9G"/>
+                                </constraints>
+                                <state key="normal" image="phone"/>
+                                <connections>
+                                    <action selector="pressOnLoginWith:" destination="apA-HW-2ND" eventType="touchUpInside" id="1i6-PK-PAm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yf8-A1-lYz">
+                                <rect key="frame" x="130" y="278" width="122" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Forgot password">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="16" name="Geneva"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="pressOnForgot:" destination="apA-HW-2ND" eventType="touchUpInside" id="uCP-hY-imr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZ5-qM-7UN">
+                                <rect key="frame" x="110" y="312" width="157" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Create a new account">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="16" name="Geneva"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="pressOnCreate:" destination="apA-HW-2ND" eventType="touchUpInside" id="3PA-uY-nGL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dny-5V-C0S" firstAttribute="top" secondItem="dl0-yo-708" secondAttribute="top" constant="75" id="2iZ-9h-cO0"/>
+                            <constraint firstItem="YTC-nG-7WC" firstAttribute="leading" secondItem="dl0-yo-708" secondAttribute="leading" constant="37" id="4Pp-1j-ahC"/>
+                            <constraint firstItem="UlN-sj-pIl" firstAttribute="leading" secondItem="dny-5V-C0S" secondAttribute="trailing" constant="8" id="DQz-Bt-2Ob"/>
+                            <constraint firstItem="UlN-sj-pIl" firstAttribute="top" secondItem="dl0-yo-708" secondAttribute="top" constant="75" id="OQp-8b-Lea"/>
+                            <constraint firstItem="dl0-yo-708" firstAttribute="trailing" secondItem="wiK-mq-J88" secondAttribute="trailing" constant="38" id="V5W-Aa-UjL"/>
+                            <constraint firstItem="YTC-nG-7WC" firstAttribute="top" secondItem="UlN-sj-pIl" secondAttribute="bottom" constant="8" id="emG-5q-GAa"/>
+                            <constraint firstItem="wiK-mq-J88" firstAttribute="top" secondItem="YTC-nG-7WC" secondAttribute="bottom" constant="8" id="hCq-ru-5E7"/>
+                            <constraint firstItem="wiK-mq-J88" firstAttribute="leading" secondItem="dl0-yo-708" secondAttribute="leading" constant="38" id="mqx-3g-3kx"/>
+                            <constraint firstItem="dny-5V-C0S" firstAttribute="leading" secondItem="dl0-yo-708" secondAttribute="leading" constant="37" id="rfd-jo-woS"/>
+                            <constraint firstItem="dl0-yo-708" firstAttribute="trailing" secondItem="YTC-nG-7WC" secondAttribute="trailing" constant="38" id="zyf-u0-HW1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dl0-yo-708"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="muR-3q-dIV">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" style="done" id="N55-7P-ANW">
+                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="pressOnCancel:" destination="apA-HW-2ND" id="Dje-NA-mNX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnCancel" destination="N55-7P-ANW" id="heR-J7-SFk"/>
+                        <outlet property="btnLoginWith" destination="dny-5V-C0S" id="3pL-1o-iX6"/>
+                        <outlet property="btnSignIn" destination="wiK-mq-J88" id="6Lt-7E-tku"/>
+                        <outlet property="password" destination="YTC-nG-7WC" id="cOy-dd-IQw"/>
+                        <outlet property="user" destination="UlN-sj-pIl" id="6BF-iv-CsA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvR-zX-8ae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.60000000000002" y="61.619190404797607"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="phone" width="30" height="30"/>
+    </resources>
+</document>

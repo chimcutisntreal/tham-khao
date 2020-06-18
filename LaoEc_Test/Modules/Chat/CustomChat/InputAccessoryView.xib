@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="G3C-gp-bqU" customClass="InputAccessoryView" customModule="LaoEc_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBS-Qc-vgK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="305" placeholderIntrinsicHeight="33" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="akW-05-Djv">
+                            <rect key="frame" x="15" y="8" width="305" height="34"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                    <color key="value" red="0.94117647059999998" green="0.94117647059999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="themeStyle" value="primaryBody2"/>
+                            </userDefinedRuntimeAttributes>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type a message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OL-NM-Dic">
+                            <rect key="frame" x="18" y="9" width="118" height="33"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="themeStyle" value="disabledBody2"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgG-WW-dB5">
+                            <rect key="frame" x="329" y="6" width="38" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="38" id="29J-nv-WSI"/>
+                                <constraint firstAttribute="height" constant="38" id="AAb-Sn-la4"/>
+                            </constraints>
+                            <state key="normal" image="send"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="themeStyle" value="accentButton"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="vrs-EG-7BS" firstAttribute="bottom" secondItem="9OL-NM-Dic" secondAttribute="bottom" constant="8" id="NFe-pa-LdN"/>
+                        <constraint firstItem="UgG-WW-dB5" firstAttribute="leading" secondItem="akW-05-Djv" secondAttribute="trailing" constant="9" id="Stp-wd-PNi"/>
+                        <constraint firstItem="akW-05-Djv" firstAttribute="leading" secondItem="oBS-Qc-vgK" secondAttribute="leading" constant="15" id="YOI-nX-HVJ"/>
+                        <constraint firstItem="vrs-EG-7BS" firstAttribute="trailing" secondItem="UgG-WW-dB5" secondAttribute="trailing" constant="8" id="b1a-eN-WJM"/>
+                        <constraint firstItem="vrs-EG-7BS" firstAttribute="bottom" secondItem="akW-05-Djv" secondAttribute="bottom" constant="8" id="vG8-XV-8mK"/>
+                        <constraint firstItem="vrs-EG-7BS" firstAttribute="bottom" secondItem="UgG-WW-dB5" secondAttribute="bottom" constant="6" id="xpp-iA-edf"/>
+                        <constraint firstItem="9OL-NM-Dic" firstAttribute="leading" secondItem="oBS-Qc-vgK" secondAttribute="leading" constant="18" id="zax-yt-mFG"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="vrs-EG-7BS"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oBS-Qc-vgK" firstAttribute="top" secondItem="G3C-gp-bqU" secondAttribute="top" id="FRu-OR-AXR"/>
+                <constraint firstItem="9OL-NM-Dic" firstAttribute="top" secondItem="G3C-gp-bqU" secondAttribute="top" constant="9" id="iNi-gs-E12"/>
+                <constraint firstAttribute="trailing" secondItem="oBS-Qc-vgK" secondAttribute="trailing" id="nRW-71-NkK"/>
+                <constraint firstItem="oBS-Qc-vgK" firstAttribute="leading" secondItem="G3C-gp-bqU" secondAttribute="leading" id="q2s-gw-EHj"/>
+                <constraint firstAttribute="bottom" secondItem="oBS-Qc-vgK" secondAttribute="bottom" id="qEQ-hX-pgf"/>
+                <constraint firstItem="akW-05-Djv" firstAttribute="top" secondItem="G3C-gp-bqU" secondAttribute="top" constant="8" id="zCB-pB-KRB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="qQT-UP-DVp"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="placeholder" destination="9OL-NM-Dic" id="fGF-Y2-ais"/>
+                <outlet property="sendButton" destination="UgG-WW-dB5" id="Ytm-K8-heR"/>
+                <outlet property="textView" destination="akW-05-Djv" id="bmg-C7-h1u"/>
+            </connections>
+            <point key="canvasLocation" x="37.600000000000001" y="461.46926536731638"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="send" width="48" height="48"/>
+    </resources>
+</document>

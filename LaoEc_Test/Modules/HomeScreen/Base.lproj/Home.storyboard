@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Zew-L5-8kQ">
+            <objects>
+                <viewController storyboardIdentifier="homevc" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BSI-HH-he1" customClass="HomeViewController" customModule="LaoEc_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gh1-C2-mXe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IMx-aY-WID">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AVc-50-B3y">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YP2-CP-ONZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BSI-HH-he1" id="jEJ-1Y-Vap"/>
+                                    <outlet property="delegate" destination="BSI-HH-he1" id="cOx-n5-Xst"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="yxy-TB-Bvk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IMx-aY-WID" firstAttribute="top" secondItem="rmn-Pw-qS6" secondAttribute="top" id="7Cr-AN-IkL"/>
+                            <constraint firstItem="AVc-50-B3y" firstAttribute="trailing" secondItem="rmn-Pw-qS6" secondAttribute="trailing" id="KPg-qt-821"/>
+                            <constraint firstItem="IMx-aY-WID" firstAttribute="trailing" secondItem="rmn-Pw-qS6" secondAttribute="trailing" id="Qgq-1E-QVA"/>
+                            <constraint firstItem="AVc-50-B3y" firstAttribute="top" secondItem="IMx-aY-WID" secondAttribute="bottom" id="U8d-0V-oMq"/>
+                            <constraint firstItem="AVc-50-B3y" firstAttribute="bottom" secondItem="rmn-Pw-qS6" secondAttribute="bottom" id="brI-JG-l8h"/>
+                            <constraint firstItem="AVc-50-B3y" firstAttribute="leading" secondItem="rmn-Pw-qS6" secondAttribute="leading" id="hQE-ch-rof"/>
+                            <constraint firstItem="IMx-aY-WID" firstAttribute="leading" secondItem="rmn-Pw-qS6" secondAttribute="leading" id="mUq-bV-fzU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rmn-Pw-qS6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o9z-A4-GKH"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="homeCollectionView" destination="AVc-50-B3y" id="eXs-hF-HAW"/>
+                        <outlet property="loading" destination="yxy-TB-Bvk" id="8W6-ZE-xcX"/>
+                        <outlet property="searchBar" destination="IMx-aY-WID" id="Toh-6e-xFY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhU-uu-6VX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6024.8000000000002" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>

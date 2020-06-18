@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product Detail Controller-->
+        <scene sceneID="SaG-57-qdL">
+            <objects>
+                <viewController storyboardIdentifier="productVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NVe-tu-Vko" customClass="ProductDetailController" customModule="LaoEc_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AKB-Xc-qln">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4au-0f-WeI">
+                                <rect key="frame" x="0.0" y="758" width="414" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhb-gL-ZLW">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="55"/>
+                                        <state key="normal" title="Chat"/>
+                                        <connections>
+                                            <action selector="pressOnChat:" destination="NVe-tu-Vko" eventType="touchUpInside" id="2KM-ug-2YW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj9-J2-PIH">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="55"/>
+                                        <state key="normal" title="Buy"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dhb-gL-ZLW" secondAttribute="bottom" id="5Iz-UQ-ZQC"/>
+                                    <constraint firstItem="gj9-J2-PIH" firstAttribute="top" secondItem="4au-0f-WeI" secondAttribute="top" id="7V4-JM-9m8"/>
+                                    <constraint firstItem="dhb-gL-ZLW" firstAttribute="top" secondItem="4au-0f-WeI" secondAttribute="top" id="7Yb-FK-tO4"/>
+                                    <constraint firstAttribute="bottom" secondItem="gj9-J2-PIH" secondAttribute="bottom" id="Dyb-zw-vT7"/>
+                                    <constraint firstAttribute="trailing" secondItem="gj9-J2-PIH" secondAttribute="trailing" id="GdI-Nc-3gv"/>
+                                    <constraint firstItem="dhb-gL-ZLW" firstAttribute="leading" secondItem="4au-0f-WeI" secondAttribute="leading" id="Vu4-GQ-z50"/>
+                                    <constraint firstAttribute="height" constant="55" id="srm-M1-5Zs"/>
+                                    <constraint firstItem="gj9-J2-PIH" firstAttribute="leading" secondItem="dhb-gL-ZLW" secondAttribute="trailing" id="xI8-AN-zCE"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kf0-wz-Hi4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="714"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q2v-87-AHH">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NVe-tu-Vko" id="IcP-gC-lus"/>
+                                    <outlet property="delegate" destination="NVe-tu-Vko" id="3fg-8E-UXw"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kf0-wz-Hi4" firstAttribute="top" secondItem="O82-Gu-R0u" secondAttribute="top" id="02O-gA-w5i"/>
+                            <constraint firstItem="4au-0f-WeI" firstAttribute="bottom" secondItem="O82-Gu-R0u" secondAttribute="bottom" id="69c-FB-WhS"/>
+                            <constraint firstItem="Kf0-wz-Hi4" firstAttribute="trailing" secondItem="O82-Gu-R0u" secondAttribute="trailing" id="736-pe-yxt"/>
+                            <constraint firstItem="4au-0f-WeI" firstAttribute="trailing" secondItem="O82-Gu-R0u" secondAttribute="trailing" id="L8i-xO-hqC"/>
+                            <constraint firstItem="Kf0-wz-Hi4" firstAttribute="leading" secondItem="O82-Gu-R0u" secondAttribute="leading" id="Opm-I9-xnc"/>
+                            <constraint firstItem="4au-0f-WeI" firstAttribute="top" secondItem="Kf0-wz-Hi4" secondAttribute="bottom" id="SNs-BA-3jA"/>
+                            <constraint firstItem="4au-0f-WeI" firstAttribute="leading" secondItem="O82-Gu-R0u" secondAttribute="leading" id="Z5a-Fs-BQ0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O82-Gu-R0u"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DJi-gv-xX0">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="hRV-j9-Pef"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnChat" destination="dhb-gL-ZLW" id="b61-wD-JQW"/>
+                        <outlet property="productDetailCV" destination="Kf0-wz-Hi4" id="xuZ-lR-4xv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4d-hb-9Ca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="-280"/>
+        </scene>
+    </scenes>
+</document>

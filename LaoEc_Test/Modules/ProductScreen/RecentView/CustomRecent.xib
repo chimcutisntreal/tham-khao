@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YAr-cc-fQi" customClass="RecentViewCollectionViewCell" customModule="LaoEc_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JiB-Zi-XzL">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmg-3K-PRe">
+                        <rect key="frame" x="0.0" y="0.0" width="192" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="VdX-2q-8du"/>
+                            <constraint firstAttribute="width" constant="192" id="XWN-FJ-1fd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="csS-zG-cex">
+                        <rect key="frame" x="0.0" y="50" width="375" height="230"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qZz-yC-aU0">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="YAr-cc-fQi" id="JSh-54-cjZ"/>
+                            <outlet property="delegate" destination="YAr-cc-fQi" id="7A9-nX-nFX"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="csS-zG-cex" secondAttribute="bottom" id="216-5x-8S0"/>
+                    <constraint firstItem="csS-zG-cex" firstAttribute="leading" secondItem="JiB-Zi-XzL" secondAttribute="leading" id="FpE-Dp-jlU"/>
+                    <constraint firstAttribute="trailing" secondItem="csS-zG-cex" secondAttribute="trailing" id="Hdw-sO-I5M"/>
+                    <constraint firstAttribute="trailing" secondItem="csS-zG-cex" secondAttribute="trailing" id="M4I-lJ-ceW"/>
+                    <constraint firstAttribute="bottom" secondItem="csS-zG-cex" secondAttribute="bottom" id="SHn-kc-PZv"/>
+                    <constraint firstItem="csS-zG-cex" firstAttribute="top" secondItem="xmg-3K-PRe" secondAttribute="bottom" id="UXT-c9-YhL"/>
+                    <constraint firstItem="csS-zG-cex" firstAttribute="leading" secondItem="JiB-Zi-XzL" secondAttribute="leading" id="c11-BI-esg"/>
+                    <constraint firstItem="xmg-3K-PRe" firstAttribute="leading" secondItem="JiB-Zi-XzL" secondAttribute="leading" id="dAD-Df-9IB"/>
+                    <constraint firstItem="xmg-3K-PRe" firstAttribute="top" secondItem="JiB-Zi-XzL" secondAttribute="top" id="iXq-Wg-c9T"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="131" height="39"/>
+            <connections>
+                <outlet property="lblRecent" destination="xmg-3K-PRe" id="pHx-6D-klM"/>
+                <outlet property="recentCollectionView" destination="csS-zG-cex" id="3Xe-s2-YfE"/>
+            </connections>
+            <point key="canvasLocation" x="157.24637681159422" y="-114.50892857142857"/>
+        </collectionViewCell>
+    </objects>
+</document>
